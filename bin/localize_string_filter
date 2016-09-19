@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require "localize_string_filter"
+
+puts LocalizeStringFilter.run()
