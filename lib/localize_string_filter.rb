@@ -91,14 +91,14 @@ module LocalizeStringFilter
 	def self.run()
 
 		puts "input project path: "
-		project_path = gets.chomp
+		project_path = gets.chomp.strip
 		if project_path.empty?
 			puts "error: invalid project_path"
 			return
 		end
 
 		puts "input .strings file path: "
-		strings_path = gets.chomp
+		strings_path = gets.chomp.strip
 		if strings_path.empty?
 			puts "error: invalid strings_path"
 			return

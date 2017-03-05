@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Remove keys which never referenced by project in Localizable.strings.}
   spec.description   = %q{Remove keys which never referenced by project in Localizable.strings.}
-  spec.homepage      = "https://github.com/HongliYu/localize_string_filter."
+  spec.homepage      = "https://github.com/HongliYu/localize_string_filter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
