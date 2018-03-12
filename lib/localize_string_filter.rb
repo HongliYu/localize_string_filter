@@ -9,7 +9,7 @@ def traverse_swift_files(file_path, swift_files)
 			end
 		end
   else
-  	if (file_path.end_with? ".storyboard") || (file_path.end_with? ".swift") || (file_path.end_with? ".m") || (file_path.end_with? ".h")
+  	if (file_path.end_with? ".storyboard") || (file_path.end_with? ".swift") || (file_path.end_with? ".m") || (file_path.end_with? ".h") || (file_path.end_with? ".xib")
 		swift_files << file_path
 		# puts "File:#{File.basename(file_path)}, Size:#{File.size(file_path)}"
   	end
