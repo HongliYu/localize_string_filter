@@ -9,9 +9,9 @@ def traverse_swift_files(file_path, swift_files)
 			end
 		end
   else
-  	if file_path.end_with? ".swift"
-			swift_files << file_path
-			# puts "File:#{File.basename(file_path)}, Size:#{File.size(file_path)}"
+  	if (file_path.end_with? ".storyboard") || (file_path.end_with? ".swift") || (file_path.end_with? ".m") || (file_path.end_with? ".h")
+		swift_files << file_path
+		# puts "File:#{File.basename(file_path)}, Size:#{File.size(file_path)}"
   	end
   end
 end
@@ -19,8 +19,8 @@ end
 def collect_keys(strings_path)
 	strings_keys = Array.new
 	File.open(strings_path, "r") do |file|
-    file.each_line do |line|
-    	if line.start_with? "\""
+	    file.each_line do |line|
+	    	if line.start_with? "\""
 				temp_array = line.split('=')
 				quotation_indexes = Array.new
 				temp_array[0].split("").each_with_index do |character, index|
@@ -30,8 +30,8 @@ def collect_keys(strings_path)
 				end
 				str = temp_array[0][quotation_indexes[0], quotation_indexes[1] + 1]
 				strings_keys << str
-    	end
-    end
+	    	end
+	    end
 	end
 	return strings_keys
 end
